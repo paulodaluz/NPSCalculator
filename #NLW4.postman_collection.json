@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "bd81f160-495a-4608-ac8f-862ee4a7af50",
+		"name": "#NLW4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Paulooo1\",\r\n    \"email\": \"paulo1@gmail.com1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Survey",
+			"item": [
+				{
+					"name": "Create Survey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Queremos ouvir sua opinião!\",\r\n    \"description\": \"De 0 a 10, quanto vc recomendaria a Rocketseat?\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/surveys",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"surveys"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Surveys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3333/surveys",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"surveys"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Send Email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"pauleraa.daluz@gmail.com\",\r\n    \"survey_id\": \"a8d30acd-97f3-4d77-99d9-e5ed78629a57\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/sendMail",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"sendMail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3333/nps/:survey_id",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"nps",
+						":survey_id"
+					],
+					"variable": [
+						{
+							"key": "survey_id",
+							"value": "a8d30acd-97f3-4d77-99d9-e5ed78629a57"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
